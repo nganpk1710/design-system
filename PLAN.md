@@ -32,6 +32,9 @@ Xây bộ Design System của Lưu Load thành **thư viện component React "ag
 | 8 | Vị trí file hướng dẫn? | Repo mới, kèm một dòng trỏ từ `docs/INSTRUCTION.md` của repo `luuload` |
 | 9 | Web hiện tại còn đổi, nên làm gì? | Tạo repo riêng và khởi tạo Design System từ đó |
 | 10 | Dùng shadcn/ui được không? | Được. Chốt dùng **shadcn/ui, nền Radix** |
+| 12 | OPEN-01: radius nút CTA | **8px, theo Figma Variables** (`radius/cta` = `radius/sm`) |
+| 13 | OPEN-02: mốc breakpoint | **1920px, 1440px, 768px, 390px** |
+| 14 | OPEN-08: cỡ chữ nhỏ nhất | **12px** |
 | 11 | Duyệt đề xuất stack và lộ trình | "ok viết" sau khi được hỏi 5 điểm: shadcn/ui nền Radix, Vite, Storybook lên mạng, chỉ chế độ sáng, lộ trình 4 đợt. Hiểu là đồng ý cả 5. Nếu sai thì sửa mục 3 và mục 6 |
 
 ### 2.2 Bối cảnh đã thu thập khi audit
@@ -63,6 +66,9 @@ Xây bộ Design System của Lưu Load thành **thư viện component React "ag
 | DS-13 | Đưa lên npm | Chưa. Dùng qua GitHub hoặc registry shadcn riêng, xét sau | `CHỜ` |
 | DS-14 | Giấy phép GSAP cho dùng thương mại | Cần kiểm tra điều khoản hiện hành trước khi dùng | `CHỜ` |
 | DS-15 | Nơi host Storybook: Vercel hay GitHub Pages | Chưa chọn | `CHỜ` |
+| DS-16 | Radius nút CTA và nav | 8px (`radius/cta`, `radius/nav`). Không dùng pill trong thư viện này | `CHỐT` (14/11/2026) |
+| DS-17 | Breakpoint | 4 mốc thiết kế: 1920, 1440, 768, 390 (px). Cách nối với 3 mode Figma (Desktop / Tablet / Mobile): xem OPEN-02a | `CHỐT` (14/11/2026) |
+| DS-18 | Cỡ chữ nhỏ nhất | 12px (đúng token `font/size/12`, dùng cho caption) | `CHỐT` (14/11/2026) |
 
 ### Vì sao chọn như vậy (bản đời thường)
 
@@ -97,14 +103,15 @@ Phát hiện khi audit. Không được tự giải quyết.
 
 | ID | Chênh lệch | Ghi chú |
 |---|---|---|
-| OPEN-01 | Radius CTA và nav: Figma Semantic ghi `radius/cta` = `radius/sm` (8px), nhưng repo `luuload` D-03 và thiết kế dùng pill | Chọn 8px hay pill |
-| OPEN-02 | Breakpoint: Figma Responsive có 3 mode (Desktop, Tablet, Mobile); repo `luuload` D-04 đề xuất 4 mốc (≥1440, 1024–1439, 768–1023, <768) | Cần số px cụ thể cho từng mode |
+| ~~OPEN-01~~ | ~~Radius CTA và nav~~ | **Đã chốt: 8px (DS-16).** Ghi chú: repo `luuload` D-03 đang đề xuất pill. Hai repo khác nhau ở điểm này, cần ai đó đồng bộ `luuload` về sau. Khi qua Gate Figma, đối chiếu lại ảnh nút CTA ở Hero để chắc 8px đúng thực tế |
+| ~~OPEN-02~~ | ~~Breakpoint~~ | **Đã chốt: 1920, 1440, 768, 390 (DS-17).** Còn lại OPEN-02a ngay dưới |
+| OPEN-02a | Figma Responsive chỉ có 3 mode (Desktop, Tablet, Mobile) nhưng có 4 mốc. `ĐỀ XUẤT`: 1920 và 1440 cùng dùng mode Desktop, 768 dùng Tablet, 390 dùng Mobile. Cần xác nhận, và cần biết mốc 1920 khác 1440 ở chỗ nào (co giãn hay đổi bố cục). Token layout hiện chưa phân biệt 1920 với 1440 | Xác nhận cách nối |
 | OPEN-03 | Màu SVG khác token: vàng `#FFEF00` so với `#FFF11C`, đỏ `#BA2016` so với `#BA1616` (D-16 repo `luuload`) | Chọn bản chuẩn |
 | OPEN-04 | `css/tokens.css` của `luuload` có thể cũ so với Figma Variables | Đối chiếu ở Đợt 0, báo chênh lệch |
 | OPEN-05 | Viết tên thương hiệu: LUULOAD hay Lưu Load (D-17 repo `luuload`) | Ảnh hưởng Logo, Footer |
 | OPEN-06 | Brand Graphic Element chưa chốt | Chặn motion nâng cao và các section dùng graphic |
 | OPEN-07 | Màu rgba overlay trong Figma (`ink-overlay-16`, `paper-overlay-70`) chỉ có màu đặc, thiếu độ trong suốt | Hỏi lại giá trị alpha |
-| OPEN-08 | Cỡ chữ nhỏ nhất: Figma caption 12px, repo `luuload` D-05 đề xuất 14px | Chọn |
+| ~~OPEN-08~~ | ~~Cỡ chữ nhỏ nhất~~ | **Đã chốt: 12px (DS-18).** Repo `luuload` D-05 đề xuất 14px, khác nhau như ở OPEN-01 |
 | OPEN-09 | Có làm registry shadcn riêng (`shadcn build`) không | Xét Đợt 3 |
 
 ## 6. Lộ trình
@@ -142,8 +149,8 @@ Mốc ngày là gợi ý. Chủ dự án chỉnh theo sức làm việc.
 
 ## 8. Việc tiếp theo (cho phiên làm việc kế)
 
-1. Chủ dự án trả lời OPEN-01, OPEN-02, OPEN-08 (chặn nhóm A).
-2. Bắt đầu Đợt 0 theo mục 6.
+1. Bắt đầu Đợt 0 theo mục 6 (OPEN-01, 02, 08 đã chốt, không còn chặn nhóm A).
+2. Chủ dự án xác nhận OPEN-02a (nối 4 mốc với 3 mode Figma) trước khi làm responsive ở Đợt 1.
 3. Chọn nơi host Storybook (DS-15).
 
 ## 9. Nhật ký
@@ -151,3 +158,4 @@ Mốc ngày là gợi ý. Chủ dự án chỉnh theo sức làm việc.
 | Ngày | Thay đổi |
 |---|---|
 | 14/11/2026 | Khởi tạo: audit Figma và repo `luuload`, phỏng vấn, chốt stack, viết `PLAN.md` và `INSTRUCTION.md` |
+| 14/11/2026 | Chốt OPEN-01 (CTA 8px), OPEN-02 (1920/1440/768/390), OPEN-08 (12px) thành DS-16, DS-17, DS-18. Mở OPEN-02a |

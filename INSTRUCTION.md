@@ -105,7 +105,15 @@ Spacing: thang 4px (`spacing/1` = 4, `/2` = 8, `/4` = 16, `/6` = 24, `/8` = 32, 
 
 **Responsive** (3 mode: Desktop, Tablet, Mobile): `layout/margin`, `layout/gutter`, `layout/section-padding`, `layout/section-gap`, `layout/element-gap`, và `responsive/type/{display, heading-lg, heading-md, heading-sm, body}` (cỡ và line-height).
 
-Chỗ chưa khớp (đừng tự giải quyết): `OPEN-01` radius CTA 8px hay pill, `OPEN-02` số px của breakpoint, `OPEN-03` màu SVG khác token, `OPEN-07` alpha của overlay, `OPEN-08` cỡ chữ nhỏ nhất. Xem `PLAN.md` mục 5.
+**Đã chốt (14/11/2026):**
+
+- Nút CTA và nav chip bo **8px** (`radius/cta`, `radius/nav`). **Không dùng pill** (`DS-16`).
+- Breakpoint: **1920, 1440, 768, 390 px** (`DS-17`). Frame Figma ở 1920 và 1440 là mốc đối chiếu chính.
+- Cỡ chữ nhỏ nhất: **12px** (`font/size/12`) (`DS-18`).
+
+Chỗ chưa khớp (đừng tự giải quyết): `OPEN-02a` cách nối 4 mốc breakpoint với 3 mode Figma (Desktop, Tablet, Mobile), `OPEN-03` màu SVG khác token, `OPEN-07` alpha của overlay. Xem `PLAN.md` mục 5.
+
+Lưu ý: repo `luuload` đang ghi khác ở hai điểm (pill ở D-03, cỡ chữ tối thiểu 14px ở D-05). Ở thư viện này, quyết định bên trên thắng. Không sửa `luuload` từ đây.
 
 ## 7. Cấu trúc thư mục (đích, sẽ có sau Đợt 0)
 
