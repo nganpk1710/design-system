@@ -1,0 +1,16 @@
+{
+  "$description": "Nối biến của shadcn/ui với token Semantic của Figma. Giá trị là tên token Semantic.",
+  "background": "color.bg.default",
+  "foreground": "color.text.default",
+  "primary": "color.brand.primary",
+  "primary-foreground": "color.text.on-primary",
+  "accent": "color.brand.accent",
+  "accent-foreground": "color.text.on-accent",
+  "destructive": "color.state.error.bg",
+  "muted": "color.bg.surface-sunken",
+  "muted-foreground": "color.text.secondary",
+  "border": "color.border.default",
+  "input": "color.border.default",
+  "ring": "color.border.focus",
+  "radius": "radius.cta"
+}

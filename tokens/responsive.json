@@ -1,0 +1,139 @@
+{
+  "$description": "Nguồn: Figma Variables, file ALL-IN (I71sGioA9j1HHrIwpe2e5V). Chụp ngày 14/11/2026. Không sửa tay: sửa trong Figma rồi nhập lại.",
+  "layout": {
+    "margin": {
+      "$type": "dimension",
+      "$modes": {
+        "desktop": "{primitives.spacing.8}",
+        "tablet": "{primitives.spacing.8}",
+        "mobile": "{primitives.spacing.4}"
+      }
+    },
+    "gutter": {
+      "$type": "dimension",
+      "$modes": {
+        "desktop": "{primitives.spacing.8}",
+        "tablet": "{primitives.spacing.6}",
+        "mobile": "{primitives.spacing.4}"
+      }
+    },
+    "section-padding": {
+      "$type": "dimension",
+      "$modes": {
+        "desktop": "{primitives.spacing.20}",
+        "tablet": "{primitives.spacing.14}",
+        "mobile": "{primitives.spacing.8}"
+      }
+    },
+    "section-gap": {
+      "$type": "dimension",
+      "$modes": {
+        "desktop": "{primitives.spacing.40}",
+        "tablet": "{primitives.spacing.28}",
+        "mobile": "{primitives.spacing.16}"
+      }
+    },
+    "element-gap": {
+      "$type": "dimension",
+      "$modes": {
+        "desktop": "{primitives.spacing.25}",
+        "tablet": "{primitives.spacing.16}",
+        "mobile": "{primitives.spacing.8}"
+      }
+    }
+  },
+  "responsive": {
+    "type": {
+      "display": {
+        "size": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.font.size.140}",
+            "tablet": "{primitives.font.size.96}",
+            "mobile": "{primitives.font.size.56}"
+          }
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.line-height.150}",
+            "tablet": "{primitives.line-height.106}",
+            "mobile": "{primitives.line-height.66}"
+          }
+        }
+      },
+      "heading-lg": {
+        "size": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.font.size.48}",
+            "tablet": "{primitives.font.size.40}",
+            "mobile": "{primitives.font.size.32}"
+          }
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.line-height.58}",
+            "tablet": "{primitives.line-height.50}",
+            "mobile": "{primitives.line-height.42}"
+          }
+        }
+      },
+      "heading-md": {
+        "size": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.font.size.32}",
+            "tablet": "{primitives.font.size.28}",
+            "mobile": "{primitives.font.size.24}"
+          }
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.line-height.42}",
+            "tablet": "{primitives.line-height.38}",
+            "mobile": "{primitives.line-height.34}"
+          }
+        }
+      },
+      "heading-sm": {
+        "size": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.font.size.24}",
+            "tablet": "{primitives.font.size.24}",
+            "mobile": "{primitives.font.size.24}"
+          }
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.line-height.34}",
+            "tablet": "{primitives.line-height.34}",
+            "mobile": "{primitives.line-height.34}"
+          }
+        }
+      },
+      "body": {
+        "size": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.font.size.24}",
+            "tablet": "{primitives.font.size.20}",
+            "mobile": "{primitives.font.size.18}"
+          }
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$modes": {
+            "desktop": "{primitives.line-height.34}",
+            "tablet": "{primitives.line-height.30}",
+            "mobile": "{primitives.line-height.28}"
+          }
+        }
+      }
+    }
+  }
+}

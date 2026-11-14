@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "./fonts.css";
+@import "./tokens.css";
+
+@layer base {
+  html { font-family: var(--font-body); color: var(--color-text-default); background: var(--color-bg-default); }
+  * { border-color: var(--color-border-default); }
+}

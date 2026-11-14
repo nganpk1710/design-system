@@ -107,12 +107,12 @@ Phát hiện khi audit. Không được tự giải quyết.
 | ~~OPEN-02~~ | ~~Breakpoint~~ | **Đã chốt: 1920, 1440, 768, 390 (DS-17).** Còn lại OPEN-02a ngay dưới |
 | OPEN-02a | Figma Responsive chỉ có 3 mode (Desktop, Tablet, Mobile) nhưng có 4 mốc. `ĐỀ XUẤT`: 1920 và 1440 cùng dùng mode Desktop, 768 dùng Tablet, 390 dùng Mobile. Cần xác nhận, và cần biết mốc 1920 khác 1440 ở chỗ nào (co giãn hay đổi bố cục). Token layout hiện chưa phân biệt 1920 với 1440 | Xác nhận cách nối |
 | OPEN-03 | Màu SVG khác token: vàng `#FFEF00` so với `#FFF11C`, đỏ `#BA2016` so với `#BA1616` (D-16 repo `luuload`) | Chọn bản chuẩn |
-| OPEN-04 | `css/tokens.css` của `luuload` có thể cũ so với Figma Variables | Đối chiếu ở Đợt 0, báo chênh lệch |
+| OPEN-04 | `css/tokens.css` của `luuload` cũ so với Figma Variables | Đã đối chiếu 14/11: vàng `#FFEF00` vs `#FFF11C`, đỏ `#BA2016` vs `#BA1616`, neutral-500 `#787878` vs `#7A7A84`, ink `#000` vs neutral-900 `#111111`, paper `#FFF` vs neutral-50 `#FDFDFD`, on-accent `#090AE0` vs blue-500 `#0800B2`, CTA radius 6px vs 8px (DS-16), font tên `Vina Vit Lon` vs `Vina Vịt Lộn`. Thư viện này theo Figma. `luuload` chưa đổi, chờ chủ dự án quyết |
 | OPEN-05 | Viết tên thương hiệu: LUULOAD hay Lưu Load (D-17 repo `luuload`) | Ảnh hưởng Logo, Footer |
 | OPEN-06 | Brand Graphic Element chưa chốt | Chặn motion nâng cao và các section dùng graphic |
-| OPEN-07 | Màu rgba overlay trong Figma (`ink-overlay-16`, `paper-overlay-70`) chỉ có màu đặc, thiếu độ trong suốt | Hỏi lại giá trị alpha |
+| OPEN-07 | ~~Thiếu alpha overlay~~ | Đã đọc từ Figma: `ink-overlay-16` = #111111 alpha 0.16, `paper-overlay-70` = #FDFDFD alpha 0.70, `transparent` alpha 0. Đã nằm trong `tokens/primitives.json` |
 | ~~OPEN-08~~ | ~~Cỡ chữ nhỏ nhất~~ | **Đã chốt: 12px (DS-18).** Repo `luuload` D-05 đề xuất 14px, khác nhau như ở OPEN-01 |
-| OPEN-09 | Có làm registry shadcn riêng (`shadcn build`) không | Xét Đợt 3 |
+| OPEN-09 | Có làm registry shadcn riêng (`shadcn build`) không | Xét Đợt 3. Lưu ý: `ui.shadcn.com` bị chặn trong môi trường của AI (403), nên `npx shadcn add` không tải được. Component được viết tay theo mẫu shadcn |
 
 ## 6. Lộ trình
 
@@ -159,3 +159,4 @@ Mốc ngày là gợi ý. Chủ dự án chỉnh theo sức làm việc.
 |---|---|
 | 14/11/2026 | Khởi tạo: audit Figma và repo `luuload`, phỏng vấn, chốt stack, viết `PLAN.md` và `INSTRUCTION.md` |
 | 14/11/2026 | Chốt OPEN-01 (CTA 8px), OPEN-02 (1920/1440/768/390), OPEN-08 (12px) thành DS-16, DS-17, DS-18. Mở OPEN-02a |
+| 14/11/2026 | Đợt 0: `tokens/*.json` (152 primitives, 118 semantic, 15 responsive, `shadcn-map.json`), `scripts/sync-tokens.mjs` sinh `src/styles/tokens.css`, `scripts/check-hardcode.mjs`, khung Vite + React + TS + Tailwind v4, Storybook 10 với trang Foundations/Tokens, font chép từ `luuload`, `components.manifest.json` rỗng. Đã so ảnh trang Tokens với số liệu Figma ở 1440. Cảnh báo `npm audit` mức vừa ở gói `glob` (công cụ dev, không vào bản build) |

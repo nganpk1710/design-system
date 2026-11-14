@@ -4,7 +4,7 @@
 
 Người dùng là **designer, không phải lập trình viên**. Khi giải thích hoặc báo cáo, dùng ngôn ngữ đời thường, nêu ví dụ, tránh thuật ngữ trần trụi.
 
-Trạng thái repo: **Đợt 0 chưa bắt đầu**. Chưa có code. Các lệnh và đường dẫn đánh dấu `(sẽ có)` chưa tồn tại, đừng giả định chúng chạy được.
+Trạng thái repo: **Đợt 0 xong phần nền** (14/11/2026). Đã có: `tokens/*.json`, `npm run tokens:sync`, `npm run check:hardcode`, `npm run build`, `npm run storybook` (trang Foundations/Tokens). Chưa có component nào: `components.manifest.json` rỗng. Chưa tải được component từ `ui.shadcn.com` (bị chặn), nên viết tay theo mẫu shadcn. `src/styles/tokens.css` tự sinh, không commit.
 
 ## 1. Đây là gì
 
@@ -18,8 +18,8 @@ Thư viện component React của **Lưu Load**, cộng đồng sáng tạo chuy
 
 | Nhiệm vụ | Đọc theo thứ tự |
 |---|---|
-| Sửa hoặc thêm token (màu, font, khoảng cách) | Mục 6 → `tokens/*.json` (sẽ có) → Figma Variables |
-| Dựng hoặc sửa một component | Mục 8 và 9 → `components.manifest.json` (sẽ có) → Figma frame → file component cùng thư mục |
+| Sửa hoặc thêm token (màu, font, khoảng cách) | Mục 6 → `tokens/*.json` → Figma Variables |
+| Dựng hoặc sửa một component | Mục 8 và 9 → `components.manifest.json` → Figma frame → file component cùng thư mục |
 | Dựng một màn hình từ component | Mục 8 → manifest (chỉ dùng `stable`) |
 | Chuyển động | Mục 9 |
 | Chữ, nhãn, microcopy | Mục 10 |
@@ -85,7 +85,7 @@ Các node mà repo `luuload` đã dùng (đối chiếu chéo): hero `2363:2492`
 
 ## 6. Token (nguồn: Figma Variables, 3 bộ)
 
-Bản chụp ngày 14/11/2026. Giá trị thật nằm trong `tokens/*.json` (sẽ có). Nếu hai bên khác nhau, Figma Variables thắng và báo chênh lệch.
+Bản chụp ngày 14/11/2026. Giá trị thật nằm trong `tokens/*.json`. Nếu hai bên khác nhau, Figma Variables thắng và báo chênh lệch.
 
 **Primitives** (màu theo thang 50–950): `blue`, `yellow`, `red`, `sky`, `mint`, `green`, `orange`, `neutral`. Màu lõi: blue 500 `#0800B2`, yellow 500 `#FFF11C`, red 500 `#BA1616`, sky 500 `#32BBFF`, mint 500 `#4BFFDF`, green 500 `#24FC7D`, orange 500 `#FF6932`, neutral 50 `#FDFDFD` đến 950 `#0A0A0C`.
 Spacing: thang 4px (`spacing/1` = 4, `/2` = 8, `/4` = 16, `/6` = 24, `/8` = 32, `/10` = 40, … `/64` = 256). Radius: `none` 0, `sm` 8, `md` 12, `lg` 24, `full` 999. Font: tiêu đề **Vina Vịt Lộn**, nội dung **Aeonik**. Cỡ chữ: 12, 16, 18, 20, 24, 28, 32, 40, 48, 56, 96, 140. Letter-spacing: `tight` −2.8, `wide` 0.64.
@@ -160,7 +160,7 @@ Quy tắc gọi:
 - Component tương tác dùng nền Radix qua shadcn/ui. Bật `asChild` khi cần đổi thẻ, không tự bọc thêm.
 - Mọi component có `data-slot` để dễ chọn và kiểm thử, theo mẫu shadcn.
 
-### components.manifest.json (sẽ có)
+### components.manifest.json
 
 Mỗi component có một mục. Ví dụ:
 
@@ -209,7 +209,7 @@ Mỗi component có một mục. Ví dụ:
 - Nguồn đầy đủ: `docs/BRAND.md` và `docs/CONTENT` trong repo `luuload`. Viết tên thương hiệu: chờ `OPEN-05`.
 - Không bịa chữ. Thiếu copy thì dùng giá trị tạm và ghi `TODO(content)`.
 
-## 11. Lệnh (sẽ có sau Đợt 0)
+## 11. Lệnh
 
 | Lệnh | Việc |
 |---|---|

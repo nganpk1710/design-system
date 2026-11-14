@@ -1,0 +1,647 @@
+{
+  "$description": "Nguồn: Figma Variables, file ALL-IN (I71sGioA9j1HHrIwpe2e5V). Chụp ngày 14/11/2026. Không sửa tay: sửa trong Figma rồi nhập lại.",
+  "color": {
+    "blue": {
+      "50": {
+        "$type": "color",
+        "$value": "#ecf2ff"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#d3e1ff"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#a1befd"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#5d8bfc"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#204de9"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#0800b2"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#050593"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#030075"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#020053"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#010032"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#00001a"
+      }
+    },
+    "yellow": {
+      "50": {
+        "$type": "color",
+        "$value": "#fffff4"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#fffee6"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#fffcca"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#fff9a4"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#fff671"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#fff11c"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#d7cb11"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#aba111"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#7a7309"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#4d4801"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#292600"
+      }
+    },
+    "red": {
+      "50": {
+        "$type": "color",
+        "$value": "#fff2f0"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#fee0db"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#ffbbb1"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#fd8274"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#e5483d"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#ba1616"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#9f060b"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#7d0608"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#590002"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#370001"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#1c0000"
+      }
+    },
+    "sky": {
+      "50": {
+        "$type": "color",
+        "$value": "#f5fbff"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#e8f6ff"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#cdebff"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#a6ddff"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#77ccff"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#32bbff"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#119edc"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#017cb0"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#00587e"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#01364f"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#001b2a"
+      }
+    },
+    "mint": {
+      "50": {
+        "$type": "color",
+        "$value": "#f8fffd"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#eefffa"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#dafff5"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#baffee"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#92fee7"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#4bffdf"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#0ddabc"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#10ac95"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#087b6a"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#004e42"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#012922"
+      }
+    },
+    "green": {
+      "50": {
+        "$type": "color",
+        "$value": "#f7fff8"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#ecffef"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#d5ffdd"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#b0ffc1"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#7cfe9f"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#24fc7d"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#19d568"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#02a94f"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#017937"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#024c20"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#00280e"
+      }
+    },
+    "orange": {
+      "50": {
+        "$type": "color",
+        "$value": "#fff7f5"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#ffede7"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#fed8cb"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#feb9a3"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#fe9572"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#ff6932"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#e14d06"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#b23c06"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#7f2803"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#511600"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#2b0700"
+      }
+    },
+    "neutral": {
+      "50": {
+        "$type": "color",
+        "$value": "#fdfdfd"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#f0f0f4"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#e2e2e8"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#c8c8d0"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#a3a3ac"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#7a7a84"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#5a5a63"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#3c3c44"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#232329"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#111111"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#0a0a0c"
+      }
+    },
+    "transparent": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,0)"
+    },
+    "ink-overlay-16": {
+      "$type": "color",
+      "$value": "rgba(17,17,17,0.16)"
+    },
+    "paper-overlay-70": {
+      "$type": "color",
+      "$value": "rgba(253,253,253,0.7)"
+    }
+  },
+  "spacing": {
+    "0": {
+      "$type": "dimension",
+      "$value": 0
+    },
+    "1": {
+      "$type": "dimension",
+      "$value": 4
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": 8
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": 12
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": 16
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": 20
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": 24
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": 32
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": 40
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": 48
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": 56
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": 64
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": 80
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": 96
+    },
+    "25": {
+      "$type": "dimension",
+      "$value": 100
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": 112
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": 128
+    },
+    "36": {
+      "$type": "dimension",
+      "$value": 144
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": 160
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": 192
+    },
+    "56": {
+      "$type": "dimension",
+      "$value": 224
+    },
+    "64": {
+      "$type": "dimension",
+      "$value": 256
+    }
+  },
+  "radius": {
+    "none": {
+      "$type": "dimension",
+      "$value": 0
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": 8
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": 12
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": 24
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": 999
+    }
+  },
+  "size": {
+    "40": {
+      "$type": "dimension",
+      "$value": 40
+    }
+  },
+  "font": {
+    "family": {
+      "title": {
+        "$type": "fontFamily",
+        "$value": "Vina Vịt Lộn"
+      },
+      "body": {
+        "$type": "fontFamily",
+        "$value": "Aeonik"
+      }
+    },
+    "size": {
+      "12": {
+        "$type": "dimension",
+        "$value": 12
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": 16
+      },
+      "18": {
+        "$type": "dimension",
+        "$value": 18
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": 20
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": 24
+      },
+      "28": {
+        "$type": "dimension",
+        "$value": 28
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": 32
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": 40
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": 48
+      },
+      "56": {
+        "$type": "dimension",
+        "$value": 56
+      },
+      "96": {
+        "$type": "dimension",
+        "$value": 96
+      },
+      "140": {
+        "$type": "dimension",
+        "$value": 140
+      }
+    },
+    "weight": {
+      "400": {
+        "$type": "fontWeight",
+        "$value": 400
+      },
+      "500": {
+        "$type": "fontWeight",
+        "$value": 500
+      },
+      "600": {
+        "$type": "fontWeight",
+        "$value": 600
+      },
+      "700": {
+        "$type": "fontWeight",
+        "$value": 700
+      }
+    }
+  },
+  "line-height": {
+    "22": {
+      "$type": "dimension",
+      "$value": 22
+    },
+    "26": {
+      "$type": "dimension",
+      "$value": 26
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": 28
+    },
+    "30": {
+      "$type": "dimension",
+      "$value": 30
+    },
+    "34": {
+      "$type": "dimension",
+      "$value": 34
+    },
+    "38": {
+      "$type": "dimension",
+      "$value": 38
+    },
+    "42": {
+      "$type": "dimension",
+      "$value": 42
+    },
+    "50": {
+      "$type": "dimension",
+      "$value": 50
+    },
+    "58": {
+      "$type": "dimension",
+      "$value": 58
+    },
+    "66": {
+      "$type": "dimension",
+      "$value": 66
+    },
+    "106": {
+      "$type": "dimension",
+      "$value": 106
+    },
+    "150": {
+      "$type": "dimension",
+      "$value": 150
+    }
+  },
+  "letter-spacing": {
+    "normal": {
+      "$type": "dimension",
+      "$value": 0
+    },
+    "tight": {
+      "$type": "dimension",
+      "$value": -2.8
+    },
+    "wide": {
+      "$type": "dimension",
+      "$value": 0.64
+    }
+  }
+}
