@@ -4,7 +4,7 @@
 
 Người dùng là **designer, không phải lập trình viên**. Khi giải thích hoặc báo cáo, dùng ngôn ngữ đời thường, nêu ví dụ, tránh thuật ngữ trần trụi.
 
-Trạng thái repo: **Đợt 0 xong phần nền** (14/11/2026). Đã có: `tokens/*.json`, `npm run tokens:sync`, `npm run check:hardcode`, `npm run build`, `npm run storybook` (trang Foundations/Tokens). Chưa có component nào: `components.manifest.json` rỗng. Chưa tải được component từ `ui.shadcn.com` (bị chặn), nên viết tay theo mẫu shadcn. `src/styles/tokens.css` tự sinh, không commit.
+Trạng thái repo: **Đợt 0 xong phần nền** (14/11/2026). Đã có: `tokens/*.json`, `npm run tokens:sync`, `npm run check:hardcode`, `npm run build`, `npm run storybook` (trang Foundations/Tokens). Đã có component (xem `components.manifest.json`, trường `implemented`). Trang Figma `Design System` (2432:186) là wireframe cũ: chỉ lấy cấu trúc, không lấy phong cách. Chưa tải được component từ `ui.shadcn.com` (bị chặn), nên viết tay theo mẫu shadcn. `src/styles/tokens.css` tự sinh, không commit.
 
 ## 1. Đây là gì
 
@@ -31,7 +31,7 @@ Không đọc toàn bộ tài liệu mỗi lần.
 
 1. **Quyết định `CHỐT`** trong `PLAN.md` mục 3. Thắng mọi thứ.
 2. **Figma** cho bố cục, tỉ lệ, khoảng cách, thứ tự thị giác.
-3. **Token trong `tokens/*.json`** (sẽ có), sinh ra từ Figma Variables.
+3. **Token trong `tokens/*.json`**, sinh ra từ Figma Variables.
 4. **Code hiện có và các file `.md`.** Mâu thuẫn với 1–3 thì file đó đã cũ, báo lại, không tự sửa.
 5. **Phỏng đoán của AI: không được dùng.**
 

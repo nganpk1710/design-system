@@ -1,5 +1,196 @@
 {
   "$description": "Danh sách component dạng máy đọc. implemented=false nghĩa là chưa có code.",
   "version": 1,
-  "components": []
+  "components": [
+    {
+      "name": "Button",
+      "layer": "ui",
+      "status": "stable",
+      "implemented": true,
+      "figma": [
+        "2332:204"
+      ],
+      "variants": {
+        "variant": [
+          "accent",
+          "primary(draft)"
+        ],
+        "icon": [
+          "none",
+          "arrow"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled"
+      ],
+      "story": "src/components/ui/button.stories.tsx",
+      "notes": "Biến thể primary chưa có trong Figma web. Chữ nút: frame #090AE0 vs token text/on-accent, đang dùng text/brand, chờ xác nhận."
+    },
+    {
+      "name": "Pill",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2155:1230"
+      ],
+      "variants": {
+        "tone": [
+          "primary",
+          "sky",
+          "orange"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/pill.stories.tsx",
+      "notes": "Hoa văn hai bên (ornament) chưa có asset. Viền 8px và icon 36px chưa có token."
+    },
+    {
+      "name": "NavItem",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2352:812"
+      ],
+      "variants": {
+        "tone": [
+          "chip",
+          "bare"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focus"
+      ],
+      "story": "src/components/ui/nav-item.stories.tsx",
+      "notes": "Chấm vàng 5px mặc định chưa làm. Hero dùng Aeonik 18 trắng, ta đang dùng kiểu nav của token (Vina 16)."
+    },
+    {
+      "name": "Label",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [],
+      "variants": {},
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/form.stories.tsx",
+      "notes": "Chưa có thiết kế form trong Figma web. Dựng theo cấu trúc shadcn + token."
+    },
+    {
+      "name": "Input",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [],
+      "variants": {},
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "story": "src/components/ui/form.stories.tsx",
+      "notes": "Như Label."
+    },
+    {
+      "name": "Textarea",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [],
+      "variants": {},
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "story": "src/components/ui/form.stories.tsx",
+      "notes": "Như Label."
+    },
+    {
+      "name": "Checkbox",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [],
+      "variants": {},
+      "states": [
+        "unchecked",
+        "checked",
+        "focus",
+        "disabled"
+      ],
+      "story": "src/components/ui/form.stories.tsx",
+      "notes": "Như Label."
+    },
+    {
+      "name": "Dialog",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [],
+      "variants": {},
+      "states": [
+        "open",
+        "closed"
+      ],
+      "story": "src/components/ui/form.stories.tsx",
+      "notes": "Modal chưa có thiết kế. Lớp phủ dùng bg/overlay."
+    },
+    {
+      "name": "Header",
+      "layer": "blocks",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2332:184"
+      ],
+      "variants": {
+        "state": [
+          "guest",
+          "authed(draft)"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/blocks/header.stories.tsx",
+      "notes": "State authed chỉ có ở wireframe cũ (chuông, thư, avatar). Chip logo 138x41 chưa có token."
+    },
+    {
+      "name": "Footer",
+      "layer": "blocks",
+      "status": "planned",
+      "implemented": false,
+      "figma": [
+        "2155:1493"
+      ],
+      "variants": {},
+      "states": [],
+      "story": null,
+      "notes": "Đợt 1, lượt sau."
+    },
+    {
+      "name": "Toast",
+      "layer": "ui",
+      "status": "planned",
+      "implemented": false,
+      "figma": [],
+      "variants": {},
+      "states": [],
+      "story": null,
+      "notes": "Đợt 1, lượt sau. Chưa có thiết kế."
+    }
+  ]
 }

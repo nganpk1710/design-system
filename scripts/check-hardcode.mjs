@@ -30,7 +30,7 @@ let bad = 0, n = 0;
 for (const d of dirs) for (const f of files(d)) {
   n++;
   readFileSync(f, "utf8").split("\n").forEach((line, i) => {
-    if (line.includes("check-hardcode-ignore")) return;
+    if (line.includes("check-hardcode-ignore") || /^\s*(\/\/|\*|\/\*)/.test(line)) return; // bỏ qua dòng chú thích
     for (const [re, why] of rules) if (re.test(line)) { console.log(`${relative(root, f)}:${i + 1}  ${why}\n    ${line.trim()}`); bad++; }
   });
 }

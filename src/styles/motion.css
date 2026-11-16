@@ -1,0 +1,8 @@
+/* Biến chuyển động dùng chung. Giá trị ĐỀ XUẤT (theo luuload D-10), chờ Figma/MOTION chốt. */
+:root {
+  --motion-hover-duration: 1000ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --motion-hover-duration: 1ms; }
+}
