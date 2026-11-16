@@ -147,6 +147,9 @@ Quy ước đặt tên (theo kiểu shadcn): file `kebab-case.tsx`, component `P
 ```tsx
 <Button variant="accent" size="lg" icon="arrow">Kết nối ngay</Button>
 <NavItem href="/gallery" active>Các dự án</NavItem>
+<Box padding="md" background="surface">…</Box>
+<Stack space="md" align="start">…</Stack>
+<Inline space="sm" align="center" shouldWrap>…</Inline>
 <Header state="guest" active="gallery" />
 <Header state="authed" active="community" />
 <ProjectCard project={project} />

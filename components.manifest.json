@@ -277,6 +277,102 @@
       ],
       "story": "src/components/ui/homepage-cards.stories.tsx",
       "notes": "Hover/focus chưa có thiết kế."
+    },
+    {
+      "name": "Box",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2519:169"
+      ],
+      "variants": {
+        "padding": [
+          "none",
+          "xxs",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "background": [
+          "none",
+          "surface",
+          "primary",
+          "accent",
+          "red"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/layout.stories.tsx",
+      "notes": "Học Atlassian Forge. Padding dùng token inset (p-inset-*). Slot Content. Chưa có Radius, chưa có dạng nền Default/Sky... theo Figma."
+    },
+    {
+      "name": "Stack",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2519:314"
+      ],
+      "variants": {
+        "space": [
+          "none",
+          "xxs",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "align": [
+          "start",
+          "center",
+          "end"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/layout.stories.tsx",
+      "notes": "Xếp dọc, gap dùng token stack (gap-stack-*). Slot Content. Chưa có Spread."
+    },
+    {
+      "name": "Inline",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2519:444"
+      ],
+      "variants": {
+        "space": [
+          "none",
+          "xxs",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "align": [
+          "start",
+          "center",
+          "end"
+        ],
+        "shouldWrap": [
+          true,
+          false
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/layout.stories.tsx",
+      "notes": "Xếp ngang, gap dùng token inline (gap-inline-*). Slot Content. Chưa có Spread."
     }
   ]
 }

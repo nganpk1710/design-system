@@ -11,3 +11,6 @@ export { BrandFoundationCard } from "./components/ui/brand-foundation-card";
 export { CommunityCard } from "./components/ui/community-card";
 export { Tag } from "./components/ui/tag";
 export { BackToTop } from "./components/ui/back-to-top";
+export { Box } from "./components/ui/box";
+export { Stack } from "./components/ui/stack";
+export { Inline } from "./components/ui/inline";
