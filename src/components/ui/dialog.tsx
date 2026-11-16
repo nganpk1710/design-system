@@ -19,7 +19,7 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "fixed top-1/2 left-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 rounded-card border-2 border-border-strong bg-bg-surface p-6 text-text-default outline-none",
+          "fixed top-1/2 left-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-stack-xs rounded-card border-2 border-border-strong bg-bg-surface p-inset-sm text-text-default outline-none",
           className,
         )}
         {...props}
@@ -38,10 +38,10 @@ function DialogContent({
   );
 }
 function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
-  return <div data-slot="dialog-header" className={cn("grid gap-2", className)} {...props} />;
+  return <div data-slot="dialog-header" className={cn("grid gap-stack-xxs", className)} {...props} />;
 }
 function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
-  return <div data-slot="dialog-footer" className={cn("flex flex-wrap justify-end gap-2", className)} {...props} />;
+  return <div data-slot="dialog-footer" className={cn("flex flex-wrap justify-end gap-inline-xxs", className)} {...props} />;
 }
 function DialogTitle({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Title>) {
   return <DialogPrimitive.Title data-slot="dialog-title" className={cn("type-heading-md", className)} {...props} />;

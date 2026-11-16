@@ -1,44 +1,55 @@
 import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { Slot } from "radix-ui";
 import { cn } from "@/lib/utils";
 
-// Figma: Design System > Box (2519:169). Hộp có padding + nền. Padding lấy từ token inset (co theo thiết bị).
-// TODO(figma): chưa có property Radius.
+// Figma: Design System > Box (2526:163). Box CHỈ quản lý padding, lấy từ token inset (co theo thiết bị).
+// Không có nền, màu, viền: những thứ đó thuộc về component bên trong.
+export type InsetSize = "none" | "xxs" | "xs" | "sm" | "md" | "lg" | "xl";
+
 const boxVariants = cva("", {
   variants: {
-    padding: {
-      none: "p-inset-none",
-      xxs: "p-inset-xxs",
-      xs: "p-inset-xs",
-      sm: "p-inset-sm",
-      md: "p-inset-md",
-      lg: "p-inset-lg",
-      xl: "p-inset-xl",
+    paddingY: {
+      none: "py-inset-none",
+      xxs: "py-inset-xxs",
+      xs: "py-inset-xs",
+      sm: "py-inset-sm",
+      md: "py-inset-md",
+      lg: "py-inset-lg",
+      xl: "py-inset-xl",
     },
-    background: {
-      none: "",
-      surface: "bg-bg-surface text-text-default",
-      primary: "bg-bg-primary text-text-on-primary",
-      accent: "bg-bg-accent text-text-on-accent",
-      red: "bg-bg-red text-text-on-red",
+    paddingX: {
+      none: "px-inset-none",
+      xxs: "px-inset-xxs",
+      xs: "px-inset-xs",
+      sm: "px-inset-sm",
+      md: "px-inset-md",
+      lg: "px-inset-lg",
+      xl: "px-inset-xl",
     },
   },
-  defaultVariants: { padding: "md", background: "none" },
 });
 
-export interface BoxProps extends React.ComponentProps<"div">, VariantProps<typeof boxVariants> {
+export interface BoxProps extends React.ComponentProps<"div"> {
+  /** Padding đều bốn phía. Bằng Padding Dọc = Padding Ngang trong Figma. */
+  padding?: InsetSize;
+  /** Padding Dọc (trên, dưới). Ưu tiên hơn `padding`. */
+  paddingY?: InsetSize;
+  /** Padding Ngang (trái, phải). Ưu tiên hơn `padding`. */
+  paddingX?: InsetSize;
   asChild?: boolean;
 }
 
-function Box({ className, padding, background, asChild = false, ...props }: BoxProps) {
+function Box({ className, padding, paddingY, paddingX, asChild = false, ...props }: BoxProps) {
   const Comp = asChild ? Slot.Root : "div";
+  const y = paddingY ?? padding ?? "md";
+  const x = paddingX ?? padding ?? "md";
   return (
     <Comp
       data-slot="box"
-      data-padding={padding ?? "md"}
-      data-background={background ?? "none"}
-      className={cn(boxVariants({ padding, background }), className)}
+      data-padding-y={y}
+      data-padding-x={x}
+      className={cn(boxVariants({ paddingY: y, paddingX: x }), className)}
       {...props}
     />
   );

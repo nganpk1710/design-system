@@ -15,9 +15,9 @@
           "accent",
           "primary(draft)"
         ],
-        "icon": [
-          "none",
-          "arrow"
+        "showIcon": [
+          "true",
+          "false"
         ]
       },
       "states": [
@@ -27,7 +27,7 @@
         "disabled"
       ],
       "story": "src/components/ui/button.stories.tsx",
-      "notes": "Biến thể primary chưa có trong Figma web. Chữ nút: frame #090AE0 vs token text/on-accent, đang dùng text/brand, chờ xác nhận."
+      "notes": "Props: children = Label, showIcon, icon (slot, mặc định mũi tên). Biến thể primary chưa có trong Figma web. Chữ nút: frame #090AE0 vs token text/on-accent, đang dùng text/brand, chờ xác nhận."
     },
     {
       "name": "Pill",
@@ -48,7 +48,7 @@
         "default"
       ],
       "story": "src/components/ui/pill.stories.tsx",
-      "notes": "Hoa văn hai bên (ornament) chưa có asset. Viền 8px và icon 36px chưa có token."
+      "notes": "Slot icon (Show icon + Icon trong Figma); hoa văn chưa có asset. Padding ngang inset/lg (Figma cũ 40, lệch 8). Viền 8px và icon 36px chưa có token."
     },
     {
       "name": "NavItem",
@@ -284,7 +284,7 @@
       "status": "draft",
       "implemented": true,
       "figma": [
-        "2519:169"
+        "2526:163"
       ],
       "variants": {
         "padding": [
@@ -296,19 +296,30 @@
           "lg",
           "xl"
         ],
-        "background": [
+        "paddingY": [
           "none",
-          "surface",
-          "primary",
-          "accent",
-          "red"
+          "xxs",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "paddingX": [
+          "none",
+          "xxs",
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
         ]
       },
       "states": [
         "default"
       ],
       "story": "src/components/ui/layout.stories.tsx",
-      "notes": "Học Atlassian Forge. Padding dùng token inset (p-inset-*). Slot Content. Chưa có Radius, chưa có dạng nền Default/Sky... theo Figma."
+      "notes": "Chỉ quản lý padding (Padding Dọc × Padding Ngang = token inset). Không có nền/màu/viền. Slot Content."
     },
     {
       "name": "Stack",

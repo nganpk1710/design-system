@@ -3,11 +3,11 @@ import { Slot } from "radix-ui";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-// Figma: "Menu item hover" 2352:812. Hover: elip vàng nở từ mép dưới.
+// Figma: "Menu item hover" 2352:812; component 2500:76 (Label = children, padding ngang = inset/xs). Hover: elip vàng nở từ mép dưới.
 // TODO(figma): trạng thái mặc định có chấm vàng 5px, chưa có token kích thước cho chấm.
 // Hai lớp theo ngữ cảnh: "chip" (nền xám, chữ xanh, như Figma) và "bare" (chữ trắng trên nền xanh của Hero).
 const navItemVariants = cva(
-  "type-nav-md group/nav relative inline-flex h-8 items-center overflow-hidden px-4 outline-none focus-visible:ring-2 focus-visible:ring-border-focus",
+  "type-nav-md group/nav relative inline-flex h-8 items-center overflow-hidden px-inset-xs outline-none focus-visible:ring-2 focus-visible:ring-border-focus",
   {
     variants: {
       tone: {

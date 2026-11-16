@@ -13,20 +13,24 @@ export const BoxPadding: StoryObj = {
   render: () => (
     <Inline space="md" shouldWrap>
       {SIZES.map((s) => (
-        <Box key={s} padding={s} background="accent">
-          <span className="type-small-md">inset/{s}</span>
-        </Box>
+        <div key={s} className="bg-bg-accent">
+          <Box padding={s}>
+            <div className="h-8 w-20 bg-bg-primary" />
+          </Box>
+        </div>
       ))}
     </Inline>
   ),
 };
-export const BoxBackground: StoryObj = {
+export const BoxPaddingYX: StoryObj = {
   render: () => (
     <Inline space="md" shouldWrap>
-      {(["none", "surface", "primary", "accent", "red"] as const).map((b) => (
-        <Box key={b} padding="md" background={b}>
-          <span className="type-small-md">{b}</span>
-        </Box>
+      {[["xs", "lg"], ["lg", "xs"], ["none", "md"], ["md", "none"]].map(([y, x]) => (
+        <div key={y + x} className="bg-bg-accent">
+          <Box paddingY={y as (typeof SIZES)[number]} paddingX={x as (typeof SIZES)[number]}>
+            <div className="h-8 w-20 bg-bg-primary" />
+          </Box>
+        </div>
       ))}
     </Inline>
   ),

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 // Figma: Homepage_1920px > USP > Brand Foundation (2502:204). Băng tiêu đề + hai vòng tròn đồng tâm.
 // TODO(figma): vòng trong của Vision là 362 (0.79 vòng ngoài), hai thẻ kia 324 (0.71). Đang dùng 4/5 và 5/7 cho khớp.
-const bandVariants = cva("type-heading-md flex items-center justify-between px-8 py-8", {
+const bandVariants = cva("type-heading-md flex h-24 items-center justify-between px-inset-md", {
   variants: {
     kind: {
       vision: "bg-bg-primary text-section-01-fg",
@@ -31,9 +31,11 @@ export interface BrandFoundationCardProps extends Omit<React.ComponentProps<"art
   /** Số thứ tự hiển thị, ví dụ "(01)" */
   index: string;
   title: string;
+  /** Slot Graphic. Mặc định là hai vòng tròn đồng tâm (Figma). */
+  graphic?: React.ReactNode;
 }
 
-function BrandFoundationCard({ kind, index, title, className, ...props }: BrandFoundationCardProps) {
+function BrandFoundationCard({ kind, index, title, graphic, className, ...props }: BrandFoundationCardProps) {
   return (
     <article data-slot="brand-foundation-card" data-kind={kind} className={cn("flex flex-col", className)} {...props}>
       <div className={bandVariants({ kind })}>
@@ -42,9 +44,11 @@ function BrandFoundationCard({ kind, index, title, className, ...props }: BrandF
       </div>
       {/* TODO(token): nền xám trong Figma hơi khác bg/surface-sunken, xem mô tả trong Figma */}
       <div className="flex aspect-640/559 items-center justify-center bg-bg-surface-sunken">
-        <div className={outerVariants({ kind })} aria-hidden="true">
-          <div className={innerVariants({ kind })} />
-        </div>
+        {graphic ?? (
+          <div className={outerVariants({ kind })} aria-hidden="true">
+            <div className={innerVariants({ kind })} />
+          </div>
+        )}
       </div>
     </article>
   );

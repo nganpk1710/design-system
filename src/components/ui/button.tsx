@@ -3,9 +3,11 @@ import { Slot } from "radix-ui";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-// Figma: Hero Section 2332:184, node "Button" 2332:204 (khối chữ bo 8px + nút tròn mũi tên bên phải)
+// Figma: Hero Section 2332:184, node "Button" 2332:204; component Design System 2500:56.
+// Property Figma: Variant, State, Label (children), Show icon (showIcon), Icon (slot `icon`, mặc định mũi tên).
+// Padding ngang = inset/sm. TODO(token): khe 2px giữa nhãn và nút tròn chưa có token.
 const labelVariants = cva(
-  "type-button-md inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-cta px-6 py-3 transition-colors duration-(--motion-hover-duration) ease-(--motion-ease) outline-none focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:ring-offset-2 disabled:pointer-events-none disabled:bg-state-disabled-bg disabled:text-state-disabled-fg",
+  "type-button-md inline-flex h-10 items-center justify-center gap-inline-xxs whitespace-nowrap rounded-cta px-inset-sm transition-colors duration-(--motion-hover-duration) ease-(--motion-ease) outline-none focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:ring-offset-2 disabled:pointer-events-none disabled:bg-state-disabled-bg disabled:text-state-disabled-fg",
   {
     variants: {
       variant: {
@@ -35,8 +37,10 @@ const knobVariants = cva(
 export interface ButtonProps
   extends React.ComponentProps<"button">,
     VariantProps<typeof labelVariants> {
-  /** "arrow": thêm nút tròn mũi tên bên phải như Figma. */
-  icon?: "none" | "arrow";
+  /** Hiện nút tròn bên phải (Figma: Show icon, mặc định bật). */
+  showIcon?: boolean;
+  /** Slot Icon trong nút tròn. Mặc định là mũi tên. */
+  icon?: React.ReactNode;
   asChild?: boolean;
 }
 
@@ -48,9 +52,9 @@ function ArrowIcon() {
   );
 }
 
-function Button({ className, variant, icon = "none", asChild = false, children, ...props }: ButtonProps) {
+function Button({ className, variant, showIcon = true, icon, asChild = false, children, ...props }: ButtonProps) {
   const Comp = asChild ? Slot.Root : "button";
-  if (icon === "none") {
+  if (!showIcon) {
     return (
       <Comp data-slot="button" data-variant={variant ?? "accent"} className={cn(labelVariants({ variant }), className)} {...props}>
         {children}
@@ -64,7 +68,7 @@ function Button({ className, variant, icon = "none", asChild = false, children, 
         {children}
       </Comp>
       <span data-slot="button-knob" aria-hidden="true" className={knobVariants({ variant })}>
-        <ArrowIcon />
+        {icon ?? <ArrowIcon />}
       </span>
     </span>
   );

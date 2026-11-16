@@ -16,7 +16,7 @@ export const Form: StoryObj = {
       <div style={{ display: "grid", gap: 8 }}><Label htmlFor="x">Có lỗi</Label><Input id="x" aria-invalid defaultValue="sai" /></div>
       <div style={{ display: "grid", gap: 8 }}><Label htmlFor="d">Bị khóa</Label><Input id="d" disabled defaultValue="khóa" /></div>
       <div style={{ display: "flex", gap: 8, alignItems: "center" }}><Checkbox id="c" defaultChecked /><Label htmlFor="c">Nhận bản tin</Label></div>
-      <Button type="submit">Gửi</Button>
+      <Button type="submit" showIcon={false}>Gửi</Button>
     </form>
   ),
 };
@@ -24,13 +24,13 @@ export const Form: StoryObj = {
 export const Modal: StoryObj = {
   render: () => (
     <Dialog>
-      <DialogTrigger asChild><Button>Mở hộp thoại</Button></DialogTrigger>
+      <DialogTrigger asChild><Button showIcon={false}>Mở hộp thoại</Button></DialogTrigger>
       <DialogContent closeLabel="Đóng">
         <DialogHeader>
           <DialogTitle>Kết nối với Lưu Load</DialogTitle>
           <DialogDescription>Nội dung tạm, TODO(content).</DialogDescription>
         </DialogHeader>
-        <DialogFooter><DialogClose asChild><Button variant="primary">Xong</Button></DialogClose></DialogFooter>
+        <DialogFooter><DialogClose asChild><Button variant="primary" showIcon={false}>Xong</Button></DialogClose></DialogFooter>
       </DialogContent>
     </Dialog>
   ),
