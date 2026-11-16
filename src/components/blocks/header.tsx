@@ -9,6 +9,8 @@ export interface HeaderData {
   logoHref: string;
   nav: { id: string; label: string; href: string }[];
   cta: { label: string; href: string };
+  /** Liên kết Đăng nhập, chỉ hiện ở state="guest" (cấu trúc từ Figma 2502:580) */
+  signIn: { label: string; href: string };
 }
 export interface HeaderProps extends Omit<React.ComponentProps<"header">, "children"> {
   header: HeaderData;
@@ -20,7 +22,7 @@ export interface HeaderProps extends Omit<React.ComponentProps<"header">, "child
   account?: React.ReactNode;
 }
 
-// Figma: Hero Section 2332:184. Logo vàng trái, nav giữa (chữ trắng trên nền xanh), CTA phải.
+// Figma: Hero Section 2332:184; cấu trúc guest/authed từ 2502:580 (wireframe), kiểu theo Figma Web. Thành phần trong Figma: node 2507:139. Logo vàng trái, nav giữa (chữ trắng trên nền xanh), CTA phải.
 // TODO(figma): kích thước chip logo 138x41 và bo 10 chưa có token.
 function Header({ header, active, state = "guest", account, className, ...props }: HeaderProps) {
   return (
@@ -44,10 +46,15 @@ function Header({ header, active, state = "guest", account, className, ...props 
         ))}
       </nav>
       <div className="flex items-center gap-4">
-        {state === "authed" ? account : null}
+        {state === "guest" ? (
+          <a href={header.signIn.href} className="type-nav-md text-text-on-primary outline-none focus-visible:ring-2 focus-visible:ring-border-focus">
+            {header.signIn.label}
+          </a>
+        ) : null}
         <Button asChild icon="arrow">
           <a href={header.cta.href}>{header.cta.label}</a>
         </Button>
+        {state === "authed" ? account : null}
       </div>
     </header>
   );

@@ -11,6 +11,7 @@ const data: HeaderData = {
     { id: "community", label: "Cộng Đồng", href: "/community" },
   ],
   cta: { label: "Kết Nối Ngay", href: "/contact" },
+  signIn: { label: "Đăng nhập", href: "/sign-in" },
 };
 const meta: Meta<typeof Header> = { title: "Blocks/Header", component: Header, args: { header: data }, parameters: { layout: "fullscreen" } };
 export default meta;

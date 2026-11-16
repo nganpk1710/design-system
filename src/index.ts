@@ -7,3 +7,7 @@ export { Input, Textarea } from "./components/ui/input";
 export { Checkbox } from "./components/ui/checkbox";
 export * from "./components/ui/dialog";
 export { Header, type HeaderData, type HeaderProps } from "./components/blocks/header";
+export { BrandFoundationCard } from "./components/ui/brand-foundation-card";
+export { CommunityCard } from "./components/ui/community-card";
+export { Tag } from "./components/ui/tag";
+export { BackToTop } from "./components/ui/back-to-top";

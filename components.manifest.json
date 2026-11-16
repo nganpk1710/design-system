@@ -154,7 +154,9 @@
       "status": "draft",
       "implemented": true,
       "figma": [
-        "2332:184"
+        "2332:184",
+        "2502:580",
+        "2507:139"
       ],
       "variants": {
         "state": [
@@ -166,7 +168,7 @@
         "default"
       ],
       "story": "src/components/blocks/header.stories.tsx",
-      "notes": "State authed chỉ có ở wireframe cũ (chuông, thư, avatar). Chip logo 138x41 chưa có token."
+      "notes": "Cấu trúc guest/authed từ wireframe 2502:580, kiểu theo Figma Web. Trong Figma: Header 6 biến thể (State × Active). Logo là chữ tạm."
     },
     {
       "name": "Footer",
@@ -179,7 +181,7 @@
       "variants": {},
       "states": [],
       "story": null,
-      "notes": "Đợt 1, lượt sau."
+      "notes": "Chưa dựng: footer gồm cột liên kết, chữ LƯU LOAD lớn, ô màu, Back To Top. Là section, làm cùng trang chủ."
     },
     {
       "name": "Toast",
@@ -191,6 +193,90 @@
       "states": [],
       "story": null,
       "notes": "Đợt 1, lượt sau. Chưa có thiết kế."
+    },
+    {
+      "name": "BrandFoundationCard",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2502:204",
+        "2507:164"
+      ],
+      "variants": {
+        "kind": [
+          "vision",
+          "mission",
+          "value"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/homepage-cards.stories.tsx",
+      "notes": "Vòng trong Vision 362 so với 324 ở hai thẻ kia: đang dùng 4/5 và 5/7. Nền xám lệch nhẹ token."
+    },
+    {
+      "name": "CommunityCard",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2502:375",
+        "2507:229"
+      ],
+      "variants": {
+        "group": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/homepage-cards.stories.tsx",
+      "notes": "Hình đồ họa là slot, chờ OPEN-06. Bo góc 10 chưa có token. Hover/mở rộng chưa có thiết kế."
+    },
+    {
+      "name": "Tag",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2502:269",
+        "2507:237"
+      ],
+      "variants": {
+        "tone": [
+          "orange",
+          "green"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "story": "src/components/ui/homepage-cards.stories.tsx",
+      "notes": "Màu chữ tag xanh lá chưa đọc được từ Figma."
+    },
+    {
+      "name": "BackToTop",
+      "layer": "ui",
+      "status": "draft",
+      "implemented": true,
+      "figma": [
+        "2502:256",
+        "2507:238"
+      ],
+      "variants": {},
+      "states": [
+        "default",
+        "hover",
+        "focus"
+      ],
+      "story": "src/components/ui/homepage-cards.stories.tsx",
+      "notes": "Hover/focus chưa có thiết kế."
     }
   ]
 }
