@@ -170,3 +170,5 @@ Mốc ngày là gợi ý. Chủ dự án chỉnh theo sức làm việc.
 | 16/11/2026 | Bước 2: dựng Box (Padding × Nền), Stack (Space × Align), Inline (Space × Align × Wrap) trong Figma (2519:169, 2519:314, 2519:444, có Slot Content) và code (`box.tsx`, `stack.tsx`, `inline.tsx`, story `Layout/Box, Stack, Inline`). Chưa có: Radius cho Box, Spread cho Stack/Inline |
 
 | 16/11/2026 | Slot + text property: Button (showIcon, icon slot), NavItem, Pill/Tag (icon slot), Header (Guest/Authed; slot Logo/Nav/Actions), Community Card (một thẻ, slot Artwork, Community Artwork tách riêng), Brand Foundation (slot Graphic), Modal (Title, Description, slot Content/Actions). Code đổi sang inset/stack/inline. Box chỉ còn padding (Dọc/Ngang). Pill 40→inset/lg 48 và Tag 32→inset/lg 48 đã được chủ dự án chấp nhận (16/11/2026) |
+
+| 16/11/2026 | Figma: Homepage_1440px dùng toàn component (Brand Foundation thành instance). Dựng Homepage_768px (2533:190, mode Tablet) và Homepage_390px (2533:317, mode Mobile). Thêm Header `State=Mobile` (draft: logo + nút menu hamburger, chưa có menu mở ra). Gallery trong Features projects chỉ thu nhỏ ảnh tĩnh, chưa thiết kế lại cho cảm ứng |
