@@ -17,6 +17,7 @@ function walk(obj, path = [], out = []) {
 }
 const prims = walk(P), sems = walk(S), resps = walk(R);
 const primMap = new Map(prims.map((t) => [t.path.join("."), t]));
+const semMap = new Map(sems.map((t) => [t.path.join("."), t]));
 const respMap = new Map(resps.map((t) => [t.path.join("."), t]));
 
 const px = (t, v) => (t.$type === "dimension" ? (v === 0 ? "0" : v + "px") : t.$type === "fontFamily" ? `"${v}", system-ui, sans-serif` : v);
@@ -25,10 +26,11 @@ const semVar = (p) => "--" + p.join("-");
 const respVar = (p) => "--responsive-" + p.join("-");
 
 function refVar(ref) {
-  const m = ref.match(/^\{(primitives|responsive)\.(.+)\}$/);
+  const m = ref.match(/^\{(primitives|responsive|semantic)\.(.+)\}$/);
   if (!m) throw new Error("Tham chiếu lạ: " + ref);
   const p = m[2].split(".");
   if (m[1] === "primitives") { if (!primMap.has(m[2])) throw new Error("Thiếu primitive " + m[2]); return `var(${primVar(p)})`; }
+  if (m[1] === "semantic") { if (!semMap.has(m[2])) throw new Error("Thiếu semantic " + m[2]); return `var(${semVar(p)})`; }
   if (!respMap.has(m[2])) throw new Error("Thiếu responsive " + m[2]); return `var(${respVar(p)})`;
 }
 
@@ -47,6 +49,8 @@ css += `  }\n}\n\n`;
 
 // Tailwind v4 theme: chỉ lộ ra token Semantic, bỏ bảng màu mặc định
 css += `@theme static {\n  --color-*: initial;\n  --radius-*: initial;\n  --font-*: initial;\n  --spacing: 4px;\n`;
+// Khoảng cách theo vai trò: p-inset-md, gap-stack-md, gap-inline-md (co theo thiết bị)
+for (const t of resps) if (t.path[0] === "responsive" && ["inset", "stack", "inline"].includes(t.path[1])) css += `  --spacing-${t.path.slice(1).join("-")}: var(${respVar(t.path)});\n`;
 for (const t of sems) {
   if (inTheme(t)) css += `  ${semVar(t.path)}: ${refVar(t.$value)};\n`;
 }

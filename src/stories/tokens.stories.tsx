@@ -34,7 +34,7 @@ function Page() {
   const colorGroups = [...new Set(prim.filter((t) => t.path[0] === "color" && t.path.length === 3).map((t) => t.path[1]))];
   const colorsOf = (g: string) => prim.filter((t) => t.path[0] === "color" && t.path[1] === g && t.path.length === 3);
   const specials = prim.filter((t) => t.path[0] === "color" && t.path.length === 2);
-  const spacing = prim.filter((t) => t.path[0] === "spacing");
+  const spacing = prim.filter((t) => t.path[0] === "space");
   const radius = prim.filter((t) => t.path[0] === "radius");
   const semColors = sem.filter((t) => t.path[0] === "color");
   const roles = ["display", "heading", "body", "small", "caption", "nav", "button", "label"];

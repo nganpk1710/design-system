@@ -4,41 +4,41 @@
     "margin": {
       "$type": "dimension",
       "$modes": {
-        "desktop": "{primitives.spacing.8}",
-        "tablet": "{primitives.spacing.8}",
-        "mobile": "{primitives.spacing.4}"
+        "desktop": "{primitives.space.32}",
+        "tablet": "{primitives.space.32}",
+        "mobile": "{primitives.space.16}"
       }
     },
     "gutter": {
       "$type": "dimension",
       "$modes": {
-        "desktop": "{primitives.spacing.8}",
-        "tablet": "{primitives.spacing.6}",
-        "mobile": "{primitives.spacing.4}"
+        "desktop": "{primitives.space.32}",
+        "tablet": "{primitives.space.24}",
+        "mobile": "{primitives.space.16}"
       }
     },
     "section-padding": {
       "$type": "dimension",
       "$modes": {
-        "desktop": "{primitives.spacing.20}",
-        "tablet": "{primitives.spacing.14}",
-        "mobile": "{primitives.spacing.8}"
+        "desktop": "{primitives.space.80}",
+        "tablet": "{primitives.space.56}",
+        "mobile": "{primitives.space.32}"
       }
     },
     "section-gap": {
       "$type": "dimension",
       "$modes": {
-        "desktop": "{primitives.spacing.40}",
-        "tablet": "{primitives.spacing.28}",
-        "mobile": "{primitives.spacing.16}"
+        "desktop": "{primitives.space.160}",
+        "tablet": "{primitives.space.112}",
+        "mobile": "{primitives.space.64}"
       }
     },
     "element-gap": {
       "$type": "dimension",
       "$modes": {
-        "desktop": "{primitives.spacing.25}",
-        "tablet": "{primitives.spacing.16}",
-        "mobile": "{primitives.spacing.8}"
+        "desktop": "{primitives.space.96}",
+        "tablet": "{primitives.space.64}",
+        "mobile": "{primitives.space.32}"
       }
     }
   },
@@ -132,6 +132,180 @@
             "tablet": "{primitives.line-height.30}",
             "mobile": "{primitives.line-height.28}"
           }
+        }
+      }
+    },
+    "inset": {
+      "none": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inset.none}",
+          "tablet": "{semantic.inset.none}",
+          "mobile": "{semantic.inset.none}"
+        }
+      },
+      "xxs": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inset.xxs}",
+          "tablet": "{semantic.inset.xxs}",
+          "mobile": "{semantic.inset.xxs}"
+        }
+      },
+      "xs": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inset.xs}",
+          "tablet": "{semantic.inset.xs}",
+          "mobile": "{semantic.inset.xxs}"
+        }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inset.sm}",
+          "tablet": "{semantic.inset.sm}",
+          "mobile": "{semantic.inset.xs}"
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inset.md}",
+          "tablet": "{semantic.inset.md}",
+          "mobile": "{semantic.inset.sm}"
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inset.lg}",
+          "tablet": "{semantic.inset.lg}",
+          "mobile": "{semantic.inset.md}"
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inset.xl}",
+          "tablet": "{semantic.inset.lg}",
+          "mobile": "{semantic.inset.lg}"
+        }
+      }
+    },
+    "stack": {
+      "none": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.stack.none}",
+          "tablet": "{semantic.stack.none}",
+          "mobile": "{semantic.stack.none}"
+        }
+      },
+      "xxs": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.stack.xxs}",
+          "tablet": "{semantic.stack.xxs}",
+          "mobile": "{semantic.stack.xxs}"
+        }
+      },
+      "xs": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.stack.xs}",
+          "tablet": "{semantic.stack.xs}",
+          "mobile": "{semantic.stack.xxs}"
+        }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.stack.sm}",
+          "tablet": "{semantic.stack.sm}",
+          "mobile": "{semantic.stack.xs}"
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.stack.md}",
+          "tablet": "{semantic.stack.md}",
+          "mobile": "{semantic.stack.sm}"
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.stack.lg}",
+          "tablet": "{semantic.stack.lg}",
+          "mobile": "{semantic.stack.md}"
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.stack.xl}",
+          "tablet": "{semantic.stack.lg}",
+          "mobile": "{semantic.stack.lg}"
+        }
+      }
+    },
+    "inline": {
+      "none": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inline.none}",
+          "tablet": "{semantic.inline.none}",
+          "mobile": "{semantic.inline.none}"
+        }
+      },
+      "xxs": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inline.xxs}",
+          "tablet": "{semantic.inline.xxs}",
+          "mobile": "{semantic.inline.xxs}"
+        }
+      },
+      "xs": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inline.xs}",
+          "tablet": "{semantic.inline.xs}",
+          "mobile": "{semantic.inline.xxs}"
+        }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inline.sm}",
+          "tablet": "{semantic.inline.sm}",
+          "mobile": "{semantic.inline.xs}"
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inline.md}",
+          "tablet": "{semantic.inline.md}",
+          "mobile": "{semantic.inline.sm}"
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inline.lg}",
+          "tablet": "{semantic.inline.lg}",
+          "mobile": "{semantic.inline.md}"
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$modes": {
+          "desktop": "{semantic.inline.xl}",
+          "tablet": "{semantic.inline.lg}",
+          "mobile": "{semantic.inline.lg}"
         }
       }
     }

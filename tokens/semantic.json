@@ -571,5 +571,95 @@
         "$value": "{primitives.letter-spacing.wide}"
       }
     }
+  },
+  "inset": {
+    "none": {
+      "$type": "dimension",
+      "$value": "{primitives.space.0}"
+    },
+    "xxs": {
+      "$type": "dimension",
+      "$value": "{primitives.space.8}"
+    },
+    "xs": {
+      "$type": "dimension",
+      "$value": "{primitives.space.16}"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "{primitives.space.24}"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "{primitives.space.32}"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "{primitives.space.48}"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "{primitives.space.64}"
+    }
+  },
+  "stack": {
+    "none": {
+      "$type": "dimension",
+      "$value": "{primitives.space.0}"
+    },
+    "xxs": {
+      "$type": "dimension",
+      "$value": "{primitives.space.8}"
+    },
+    "xs": {
+      "$type": "dimension",
+      "$value": "{primitives.space.16}"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "{primitives.space.24}"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "{primitives.space.32}"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "{primitives.space.48}"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "{primitives.space.64}"
+    }
+  },
+  "inline": {
+    "none": {
+      "$type": "dimension",
+      "$value": "{primitives.space.0}"
+    },
+    "xxs": {
+      "$type": "dimension",
+      "$value": "{primitives.space.8}"
+    },
+    "xs": {
+      "$type": "dimension",
+      "$value": "{primitives.space.16}"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "{primitives.space.24}"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "{primitives.space.32}"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "{primitives.space.48}"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "{primitives.space.64}"
+    }
   }
 }

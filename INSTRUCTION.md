@@ -88,7 +88,7 @@ Các node mà repo `luuload` đã dùng (đối chiếu chéo): hero `2363:2492`
 Bản chụp ngày 14/11/2026. Giá trị thật nằm trong `tokens/*.json`. Nếu hai bên khác nhau, Figma Variables thắng và báo chênh lệch.
 
 **Primitives** (màu theo thang 50–950): `blue`, `yellow`, `red`, `sky`, `mint`, `green`, `orange`, `neutral`. Màu lõi: blue 500 `#0800B2`, yellow 500 `#FFF11C`, red 500 `#BA1616`, sky 500 `#32BBFF`, mint 500 `#4BFFDF`, green 500 `#24FC7D`, orange 500 `#FF6932`, neutral 50 `#FDFDFD` đến 950 `#0A0A0C`.
-Spacing: thang 4px (`spacing/1` = 4, `/2` = 8, `/4` = 16, `/6` = 24, `/8` = 32, `/10` = 40, … `/64` = 256). Radius: `none` 0, `sm` 8, `md` 12, `lg` 24, `full` 999. Font: tiêu đề **Vina Vịt Lộn**, nội dung **Aeonik**. Cỡ chữ: 12, 16, 18, 20, 24, 28, 32, 40, 48, 56, 96, 140. Letter-spacing: `tight` −2.8, `wide` 0.64.
+Spacing: **số thô theo px, bội số của 8, từ `space/0` đến `space/256`** (33 bước: `space/8` = 8px, `space/24` = 24px). Không còn 4, 12, 20 (đã bỏ ngày 16/11/2026). Radius: `none` 0, `sm` 8, `md` 12, `lg` 24, `full` 999. Font: tiêu đề **Vina Vịt Lộn**, nội dung **Aeonik**. Cỡ chữ: 12, 16, 18, 20, 24, 28, 32, 40, 48, 56, 96, 140. Letter-spacing: `tight` −2.8, `wide` 0.64.
 
 **Semantic** (chế độ Light). Luôn dùng tên vai trò, không dùng màu thô:
 
@@ -102,6 +102,8 @@ Spacing: thang 4px (`spacing/1` = 4, `/2` = 8, `/4` = 16, `/6` = 24, `/8` = 32, 
 | Trạng thái | `state/success`, `state/warning`, `state/error`, `state/info`, `state/disabled`, mỗi cái có `bg` và `fg` |
 | Hình | `radius/card` (0), `radius/cta` (8), `radius/nav` (8), `radius/graphic` (full) |
 | Chữ (kiểu) | `type/display`, `type/heading/{lg,md,sm}`, `type/body/{lg,md,sm}`, `type/small`, `type/caption`, `type/nav`, `type/button`, `type/label` |
+
+**Khoảng cách theo vai trò** (học Atlassian Forge, 3 tầng): Primitives `space/N` → Semantic `inset/*`, `stack/*`, `inline/*` (size `none, xxs, xs, sm, md, lg, xl` = 0, 8, 16, 24, 32, 48, 64) → Responsive `responsive/inset|stack|inline/*` (3 mode, trỏ về Semantic). Component `Box` dùng `inset` (padding), `Stack` dùng `stack` (khoảng cách dọc), `Inline` dùng `inline` (khoảng cách ngang). Trong code: `p-inset-md`, `gap-stack-md`, `gap-inline-md`. Tablet: `xl` lùi về `lg`. Mobile: `xs..xl` lùi một bậc. Không dùng số px trực tiếp cho khoảng cách.
 
 **Responsive** (3 mode: Desktop, Tablet, Mobile): `layout/margin`, `layout/gutter`, `layout/section-padding`, `layout/section-gap`, `layout/element-gap`, và `responsive/type/{display, heading-lg, heading-md, heading-sm, body}` (cỡ và line-height).
 
